@@ -1,0 +1,16 @@
+---
+framework: jest
+preRun:
+     command:
+        - yarn install
+        - yarn workspace demo-app test-build-scripts
+preMerge:
+  pattern:
+    - "./**/__tests__/**/*-test.js"
+postMerge:
+  pattern: 
+    - "./**/__tests__/**/*-test.js"
+postRun:
+     command:
+        - yarn --version
+version: 1.0
