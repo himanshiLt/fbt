@@ -7,9 +7,11 @@ preRun:
 preMerge:
   pattern:
     - "./**/__tests__/**/*-test.js"
+    - "/demo-app/src/example/tests/Example.react-test.js"
 postMerge:
   pattern: 
     - "./**/__tests__/**/*-test.js"
+    - "/demo-app/src/example/tests/Example.react-test.js"
 postRun:
      command:
         - yarn --version
